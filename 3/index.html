@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LONG LIFE CONNECTION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main" id="app">
+        <div class="navbar">
+            <div class="icon">
+                <h3 class="logo">LONG LIFE CONNECTION</h3>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <button class="button">
+                    <a href="signup.html">LogIn/Register</a>
+                </button>
+            </div>
+        </div>
+        <div>
+            <img src="1.jpg" alt="Image" class="imgMain">
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="icon">原</div>
+                <h2>原神！启动！</h2>
+                <p>功德+1</p>
+                <button id="btn1" class="btn" data-count="0" onclick="incrementCounter(this.id)">点我！</button><span id="display1">0</span>次
+            </div>
+
+            <div class="box">
+                <div class="icon">原神</div>
+                <h2>原来你也玩原神？</h2>
+                <p>功德+2</p>
+                <button id="btn2" class="btn" data-count="0" onclick="incrementCounter(this.id)">点我！</button><span id="display2">0</span>次
+            </div>
+
+            <div class="box">
+                <div class="icon">神</div>
+                <h2>老婆刻晴真好看=w=</h2>
+                <p>功德+3</p>
+                <button id="btn3" class="btn" data-count="0" onclick="incrementCounter(this.id)">点我！</button><span id="display3">0</span>次
+            </div>
+        </div>
+    </div>
+    <script>
+        function incrementCounter(buttonId) {
+            let btn = document.getElementById(buttonId);
+            let count = parseInt(btn.getAttribute("data-count"), 10);
+            count++;
+            btn.setAttribute("data-count", count);
+
+            let displayId = "display" + buttonId.charAt(buttonId.length - 1);
+            let displayElement = document.getElementById(displayId);
+            displayElement.textContent = count;
+        }
+    </script>
+
+</body>
+
+</html>
